@@ -185,7 +185,7 @@ router.post('/addShop', function(req, res, next){
         }
         res.send({
             status:1,
-            data:''
+            shopId:result.insertId
         })
     });
 });
@@ -196,7 +196,8 @@ router.post('/addShop', function(req, res, next){
  * 返回 状态成功
  */
 router.post('/deleteShop', function(req, res, next){
-    let deleteSql="DELETE FROM shoplist where shopId='"+req.body.shopId+"'";
+    const shopId= JSON.parse(req.body.model).shopId;
+    let deleteSql="DELETE FROM shoplist where shopId='"+shopId+"'";
     connection.query(deleteSql,function (err, result) {
         if(err){
             console.log('[INSERT ERROR] - ',err.message);
@@ -242,6 +243,15 @@ router.post('/addDish', function(req, res, next){
             });
         }
     });
+});
+
+
+router.post('/test', function(req, res, next){
+
+    res.send({
+        status:1,
+        data:JSON.parse(req.body.model)
+    })
 });
 module.exports = router;
 

@@ -2,22 +2,23 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import RootComponent from "./components/RootComponent";
+import {post,get} from "./util/fetch";
 
 class App extends Component {
     constructor() {
-        super()
+        super();
         this.state = {
             users: [],
-            shoplist: [],
+            shopList: [],
         };
     }
 
     componentDidMount() {
-        fetch('api/shoplist', {method: 'GET'}).then(res =>
-            res.json().then(data => {
-                this.setState({shoplist: data.data});
-            })
-        )
+        get('shopList').then(res => this.setState({shopList: res.data}))
+        // const obj = {a: 1, b: 2, c: 3};
+        // post('test', obj)
+        //     .then(data => console.log(data)).catch(err => console.log(err))
+
     }
 
     shopList = (shop) => {
@@ -37,28 +38,17 @@ class App extends Component {
     jumpto = (id) => {
         window.location.href = `/${id}`;
     };
-    fetchUsers = () => {
-        // return fetch('api/users', {accpet: "application/json"}).then(res => {return res.json().then(json => {this.setState({users: json})})})
-        return fetch('api/users', {accpet: "application/json"}).then(res => res.json().then(data => {
-            this.setState({users: data.data})
-        }))
-        //   return fetch('api/shoplist', {method:'GET'}).then(res => res.json().then(data=>{this.setState({users:data.data})}))
-    }
 
     render() {
         return (<div>
                 <div className="App">
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                        <h1 className="App-title">Welcome to App</h1>
-                    </header>
-                    {/*<p className="App-intro" onClick={this.fetchUsers.bind(this)}>*/}
-                    {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
-                    {/*</p>*/}
-                    {/*{this.state.users&&this.state.users.map((user, index) => {*/}
-                    {/*return (<h1 key={index}>{user.name}</h1>)*/}
-                    {/*})}*/}
-                    {this.state.shoplist && this.state.shoplist.map(v => this.shopList(v))}
+                    {/*<header className="App-header">*/}
+                    {/*<img src={logo} className="App-logo" alt="logo"/>*/}
+                    {/*<h1 className="App-title">Welcome to App</h1>*/}
+                    {/*</header>*/}
+                    <img src={'../bannerAdmin.png'} style={{width: '100%', height: 'auto', marginBottom: '0.15rem'}}
+                         alt={'banner'}/>
+                    {this.state.shopList && this.state.shopList.map(v => this.shopList(v))}
                 </div>
                 <RootComponent/>
             </div>

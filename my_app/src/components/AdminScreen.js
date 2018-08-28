@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/_root.css';
+import {post, get} from "../util/fetch";
 
 let ID = 0;
 
 //import {Link} from 'react-router-dom';
 class AdminScreen extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-
+    constructor() {
+        super();
         this.state = {
             shopList: [],
             showShop: false,
@@ -45,28 +45,18 @@ class AdminScreen extends React.Component {
     deleteShop = (id) => {
         let shopList = this.state.shopList.filter(v => v.shopId !== id);
         this.setState({shopList});
-        fetch('api/deleteShop', {
-            method: 'POST',
-            headers: {"Content-Type": "application/x-www-form-urlencoded"},
-            body: 'shopId=' + id
-        }).then(res => res.json().then(result => {
-                alert('店铺已删除！');
-            })
-        )
+        post("deleteShop", {shopId: id}).then(alert('店铺已删除！'))
     };
     //管理店铺
     manageShop = () => {
         if (this.state.shopList.length === 0) {
-            fetch('api/shopList', {method: 'GET'}).then(res =>
-                res.json().then(data => {
-                    // let orderList=data.data.length>10?data.data.slice(0,10):data.data;
-                    this.setState({
-                        shopList: data.data,
-                        showShop: !this.state.showShop
-                    });
-                    console.log(this.state.shopList)
-                })
-            )
+            get("shopList").then(data => {
+                this.setState({
+                    shopList: data.data,
+                    showShop: !this.state.showShop
+                });
+                console.log(this.state.shopList)
+            })
         } else {
             this.setState({showShop: !this.state.showShop})
         }
@@ -74,16 +64,13 @@ class AdminScreen extends React.Component {
     //管理订单
     manageOrder = () => {
         if (this.state.orderList.length === 0) {
-            fetch('api/getOrderList', {method: 'GET'}).then(res =>
-                res.json().then(data => {
-                    // let orderList=data.data.length>10?data.data.slice(0,10):data.data;
-                    this.setState({
-                        orderList: data.data,
-                        showOrder: !this.state.showOrder
-                    });
-                    console.log(this.state.orderList)
-                })
-            )
+            get("getOrderList").then(data => {
+                this.setState({
+                    orderList: data.data,
+                    showOrder: !this.state.showOrder
+                });
+                // console.log(this.state.orderList)
+            })
         } else {
             this.setState({showOrder: !this.state.showOrder})
         }
@@ -121,7 +108,7 @@ class AdminScreen extends React.Component {
             }).then(res => res.json().then(result => {
                     alert('新增店铺成功！');
                     if (this.state.shopList.length !== 0) {
-                        this.state.shopList.push({shopId: ID--, shopName: this.state.shopName});
+                        this.state.shopList.push({shopId: result.shopId, shopName: this.state.shopName});
                     }
                     this.setState({
                         showAdd: false,
@@ -172,7 +159,7 @@ class AdminScreen extends React.Component {
         localStorage.removeItem('name');
         localStorage.removeItem('password');
         this.setState({
-            logined: localStorage.getItem('name') !== null
+            logined: false
         });
         window.location.href = '/mine';
     };

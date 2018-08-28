@@ -1,399 +1,459 @@
-.footer{
-    width:100%;
-    height:0.54rem;
+.footer {
+    width: 100%;
+    height: 0.54rem;
     background-color: #fff;
-    display:flex;
+    display: flex;
 }
-.footer .selected{
-    color:#17a09e;
+
+.footer .selected {
+    color: #17a09e;
 }
-.footer a{
-    height:0.44rem;
-    flex:1;
-    display:flex;
+
+.footer a {
+    height: 0.44rem;
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
     font-size: 16px;
 }
-.order{
-    flex:1;
+
+.order {
+    flex: 1;
     overflow-y: auto;
 }
-.mine{
-    flex:1;
+
+.mine {
+    flex: 1;
     overflow-y: auto;
 }
-.mine .mine-header{
-    height:2rem;
+
+.mine .mine-header {
+    height: 2rem;
     background-color: #17a09e;
-    color:#fff;
+    color: #fff;
     text-align: center;
 }
-.mine-header span{
-    display:inline-block;
-    height:0.6rem;
-    width:0.6rem;
+
+.mine-header span {
+    display: inline-block;
+    height: 0.6rem;
+    width: 0.6rem;
     border-radius: 0.6rem;
     background-color: #e8e8e8;
-    margin:0.2rem 0 0.15rem;
+    margin: 0.2rem 0 0.15rem;
 }
-.mine header{
-    height:0.44rem;
+
+.mine header {
+    height: 0.44rem;
     text-align: center;
-    font-size:0.16rem;
+    font-size: 0.16rem;
     line-height: 0.44rem;
     border-bottom: solid 1px #e8e8e8;
 }
-.mine nav{
+
+.mine nav {
     text-align: center;
 }
-.mine nav a{
+
+.mine nav a {
     display: inline-block;
-    padding:8px 15px;
-    margin:0 10px;
-    border:solid 1px #e8e8e8;
+    padding: 8px 15px;
+    margin: 0 10px;
+    border: solid 1px #e8e8e8;
     border-radius: 8px;
-    color:#fff;
+    color: #fff;
 }
-.mine p{
+
+.mine p {
     height: 0.45rem;
     line-height: 0.45rem;
-    background:#fff;
-    border-bottom:solid 1px #e8e8e8;
+    background: #fff;
+    border-bottom: solid 1px #e8e8e8;
     padding-left: 0.3rem;
 }
-.mine .phone{
+
+.mine .phone {
     margin-top: 0.6rem;
 }
-.login{
-    flex:1;
+
+.login {
+    flex: 1;
     overflow-y: auto;
 }
-.login>h3{
-    height:0.44rem;
+
+.login > h3 {
+    height: 0.44rem;
     line-height: 0.44rem;
-    background:#17a09e;
-    color:#fff;
+    background: #17a09e;
+    color: #fff;
     font-weight: normal;
     text-align: center;
 }
-.login section{
-    height:1rem;
+
+.login section {
+    height: 1rem;
     margin-top: 0.4rem;
 }
-.login input{
-    height:0.4rem;
-    width:2.6rem;
+
+.login input {
+    height: 0.4rem;
+    width: 2.6rem;
     outline-color: #17a09e;
 }
-.login p{
+
+.login p {
     margin-bottom: 0.2rem;
     margin-left: 0.2rem;
 }
-.login button{
-    width:1.6rem;
-    height:0.4rem;
+
+.login button {
+    width: 1.6rem;
+    height: 0.4rem;
     background-color: #17a09e;
-    color:#fff;
+    color: #fff;
     margin-left: 0.95rem;
     font-size: 0.16rem;
     margin-top: 0.2rem;
     border-radius: 0.15rem;
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
 }
-.dishes section{
-    padding:0.15rem 0.25rem;
+
+.dishes section {
+    padding: 0.15rem 0.25rem;
     margin-bottom: 0.15rem;
-    display:flex;
+    display: flex;
     background-color: #fff;
 }
-.dishes>h3{
-    height:0.44rem;
+
+.dishes > h3 {
+    height: 0.44rem;
     line-height: 0.44rem;
-    background:#17a09e;
-    color:#fff;
+    background: #17a09e;
+    color: #fff;
     font-weight: normal;
     text-align: center;
 }
-.dishes section img{
-    margin-right:0.25rem;
-    width:0.5rem;
-    height:0.5rem;
+
+.dishes section img {
+    margin-right: 0.25rem;
+    width: 0.5rem;
+    height: 0.5rem;
 }
-.dishes section>div{
-    flex:1;
+
+.dishes section > div {
+    flex: 1;
 }
-.dishes section div>p{
-    color:#ababab;
+
+.dishes section div > p {
+    color: #ababab;
     font-size: 0.13rem;
-    padding:0.05rem 0;
+    padding: 0.05rem 0;
 }
-.dishes section nav>span{
+
+.dishes section nav > span {
     font-size: 0.18rem;
-    color:#ff7b24;
+    color: #ff7b24;
     margin-right: 0.4rem;
 }
-.dishes section nav>i{
+
+.dishes section nav > i {
     font-style: normal;
     font-size: 0.13rem;
-    color:#ababab;
+    color: #ababab;
 }
-.dishes section nav{
-    display:flex;
+
+.dishes section nav {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.dishes section nav>b{
-    display:inline-block;
-    width:0.2rem;
-    height:0.2rem;
+
+.dishes section nav > b {
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
     line-height: 0.2rem;
     border-radius: 0.1rem;
     background-color: #17a09e;
-    color:#fff;
+    color: #fff;
     font-weight: normal;
     text-align: center;
     font-size: 0.2rem;
 }
-.dishes+footer{
-    height:0.44rem;
-    display:flex;
+
+.dishes + footer {
+    height: 0.44rem;
+    display: flex;
     justify-content: space-between;
-    padding-left:0.2rem;
+    padding-left: 0.2rem;
     border-top: solid 1px #e8e8e8;
-    position:relative;
+    position: relative;
 }
-.dishes+footer a{
-    display:block;
-    width:1rem;
-    height:0.44rem;
+
+.dishes + footer a {
+    display: block;
+    width: 1rem;
+    height: 0.44rem;
     text-align: center;
     background-color: #17a09e;
-    color:#fff;
+    color: #fff;
     line-height: 0.44rem;
 }
-.dishes+footer i{
-    position:absolute;
+
+.dishes + footer i {
+    position: absolute;
     display: inline-block;
     width: 0.18rem;
-    height:0.18rem;
+    height: 0.18rem;
     line-height: 0.18rem;
     text-align: center;
     border-radius: 0.09rem;
-    background:#ff7b24;
-    left:0.55rem;
-    top:0;
+    background: #ff7b24;
+    left: 0.55rem;
+    top: 0;
     font-style: normal;
-    color:#fff;
+    color: #fff;
 }
-.dishes+footer span{
+
+.dishes + footer span {
     line-height: 0.44rem;
     font-size: 0.15rem;
     margin-right: 0.8rem;
 }
-.confirm>h3{
-    height:0.44rem;
+
+.confirm > h3 {
+    height: 0.44rem;
     line-height: 0.44rem;
-    background:#17a09e;
-    color:#fff;
+    background: #17a09e;
+    color: #fff;
     font-weight: normal;
     text-align: center;
 }
-.confirm section span{
-    color:#ff7b24;
+
+.confirm section span {
+    color: #ff7b24;
     font-size: 0.18rem;
 }
-.confirm section{
+
+.confirm section {
     margin-bottom: 0.1rem;
-    padding:0.1rem 0.25rem;
+    padding: 0.1rem 0.25rem;
 }
-.confirm p{
-    width:1.8rem;
+
+.confirm p {
+    width: 1.8rem;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
-.confirm .confirm_info{
-    color:#222222;
-    padding:0.1rem 0.21rem;
+
+.confirm .confirm_info {
+    color: #222222;
+    padding: 0.1rem 0.21rem;
     font-size: 0.16rem;
 }
-.confirm-right{
-    display:flex;
+
+.confirm-right {
+    display: flex;
     justify-content: space-between;
 }
-.order-info{
-    color:#222222;
-    padding:0.1rem 0.2rem;
+
+.order-info {
+    color: #222222;
+    padding: 0.1rem 0.2rem;
     font-size: 0.16rem;
-    width:1.1rem;
+    width: 1.1rem;
     text-align: right;
 }
-.order-address{
-    width:2rem;
+
+.order-address {
+    width: 2rem;
     display: inline-block;
     margin-left: 0.08rem;
     margin-right: 0.05rem;
 }
-.order-phone{
-    width:2rem;
-    height:0.3rem;
+
+.order-phone {
+    width: 2rem;
+    height: 0.3rem;
     display: inline-block;
     margin-left: 0.08rem;
     margin-right: 0.05rem;
 }
-.address-edit{
+
+.address-edit {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: #fff;
     margin-top: 0.15rem;
 }
-.confirm+footer{
+
+.confirm + footer {
     display: flex;
     justify-content: flex-end;
 }
-.confirm+footer span{
+
+.confirm + footer span {
     margin-right: 0.2rem;
     font-size: 0.16rem;
 }
-.confirm+footer a{
-    width:1.2rem;
+
+.confirm + footer a {
+    width: 1.2rem;
 }
-.confirm .pay{
+
+.confirm .pay {
     padding-left: 0.2rem;
     font-size: 0.16rem;
-    display:flex;
+    display: flex;
     align-items: center;
     background-color: #fff;
-    height:0.4rem;
-    width:100%;
+    height: 0.4rem;
+    width: 100%;
     border-bottom: solid 1px #e8e8e8;
 }
-.confirm .pay img{
+
+.confirm .pay img {
     margin-right: 0.15rem;
-    width:0.25rem;
-    height:0.25rem;
+    width: 0.25rem;
+    height: 0.25rem;
 }
-.headerTop{
-    height:0.44rem;
+
+.headerTop {
+    height: 0.44rem;
     line-height: 0.44rem;
-    background:#17a09e;
-    color:#fff;
+    background: #17a09e;
+    color: #fff;
     font-weight: normal;
     text-align: center;
 }
-.select_order section{
-    height:1.2rem;
-    margin:0.25rem;
-    padding:0.15rem;
-    border:solid 1px #e8e8e8;
+
+.select_order section {
+    height: 1.2rem;
+    margin: 0.25rem;
+    padding: 0.15rem;
+    border: solid 1px #e8e8e8;
     background-color: #fff;
     border-radius: 0.15rem;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.select_order>p{
-    padding:0.25rem;
+
+.select_order > p {
+    padding: 0.25rem;
     font-size: 0.16rem;
 }
-.no_login{
-    padding:0.1rem 0.25rem;
+
+.no_login {
+    padding: 0.1rem 0.25rem;
     font-size: 0.15rem;
-    text-align:center;
+    text-align: center;
     margin-top: 0.3rem;
 }
-.order_login{
-    padding:0.08rem 0.4rem;
-    background-color:#17a09e;
-    display:inline-block;
-    color:#fff;
+
+.order_login {
+    padding: 0.08rem 0.4rem;
+    background-color: #17a09e;
+    display: inline-block;
+    color: #fff;
     font-size: 0.16rem;
     border-radius: 0.1rem;
     text-align: center;
     margin-top: 0.2rem;
 
 }
-.admin>p{
-    background-color:#fff;
-    padding:0.1rem 0.25rem;
+
+.admin > p {
+    background-color: #fff;
+    padding: 0.1rem 0.25rem;
     font-size: 0.16rem;
     border-bottom: solid 1px #e8e8e8;
 }
-.angleRight{
-    display:block;
-    float:right;
-    width:0;
-    height:0;
-    margin-top:0.05rem;
+
+.angleRight {
+    display: block;
+    float: right;
+    width: 0;
+    height: 0;
+    margin-top: 0.05rem;
     border-width: 0.07rem;
     border-style: solid;
     border-color: transparent transparent transparent #20292a;
 }
-.angleBottom{
-    display:block;
-    float:right;
-    width:0;
-    height:0;
-    margin-top:0.05rem;
+
+.angleBottom {
+    display: block;
+    float: right;
+    width: 0;
+    height: 0;
+    margin-top: 0.05rem;
     border-width: 0.07rem;
     border-style: solid;
     border-color: #20292a transparent transparent transparent;
 }
-.admin li{
-    background-color:#fff;
-    padding:0.1rem 0.25rem;
+
+.admin li {
+    background-color: #fff;
+    padding: 0.1rem 0.25rem;
     font-size: 0.15rem;
     border-bottom: solid 1px #e8e8e8;
 }
-.admin .addShop{
+
+.admin .addShop {
     background-color: #fff;
-    padding:0.1rem 0.25rem;
+    padding: 0.1rem 0.25rem;
     font-size: 0.15rem;
     border-bottom: solid 1px #e8e8e8;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-.admin .addShop p{
-    padding:0.1rem 0;
+
+.admin .addShop p {
+    padding: 0.1rem 0;
     font-size: 0.15rem;
 }
-.admin .addShop p input{
-    height:0.3rem;
-    width:1.5rem;
+
+.admin .addShop p input {
+    height: 0.3rem;
+    width: 1.5rem;
 }
-.admin .addShop button{
-    width:1.5rem;
-    height:0.38rem;
+
+.admin .addShop button {
+    width: 1.5rem;
+    height: 0.38rem;
     background-color: #17a09e;
     border-radius: 0.1rem;
-    color:#fff;
-    border:none;
+    color: #fff;
+    border: none;
     outline: none;
     font-size: 0.15rem;
 }
-.mine .exit{
-    margin-top:0.2rem;
-    text-align:center;
-    padding-left:0;
-    border-top:solid 1px #e8e8e8;
-    font-size: 0.16rem;
-    height:0.48rem;
-    line-height:0.48rem;
-}
-.admin+.exit{
+
+.mine .exit {
+    margin-top: 0.2rem;
     text-align: center;
-    width:100%;
-    height:0.48rem;
-    line-height:0.28rem;
+    padding-left: 0;
     border-top: solid 1px #e8e8e8;
-    padding:0.1rem 0;
     font-size: 0.16rem;
-    background-color:#17a09e;
-    color:#fff;
+    height: 0.48rem;
+    line-height: 0.48rem;
+}
+
+.admin + .exit {
+    text-align: center;
+    width: 100%;
+    height: 0.48rem;
+    line-height: 0.28rem;
+    border-top: solid 1px #e8e8e8;
+    padding: 0.1rem 0;
+    font-size: 0.16rem;
+    background-color: #17a09e;
+    color: #fff;
 }
