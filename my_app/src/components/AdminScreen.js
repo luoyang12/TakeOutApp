@@ -6,8 +6,8 @@ let ID = 0;
 
 //import {Link} from 'react-router-dom';
 class AdminScreen extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             shopList: [],
             showShop: false,

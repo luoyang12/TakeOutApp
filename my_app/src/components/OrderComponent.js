@@ -2,10 +2,11 @@ import React from 'react';
 import RootComponent from "./RootComponent";
 import '../styles/_root.css';
 import {Link} from 'react-router-dom';
+import {post} from '../util/fetch';
 
 class OrderComponent extends React.Component {
     constructor(props, context) {
-        super(props, context)
+        super(props, context);
 
         this.state = {
             orderList: [],
@@ -15,16 +16,10 @@ class OrderComponent extends React.Component {
 
     componentDidMount() {
         //根据当前登录的用户名查询到该用户的订单
-        fetch('api/getOwnOrder', {
-            method: 'POST',
-            headers: {"Content-Type": "application/x-www-form-urlencoded"},
-            body: 'userName=' + localStorage.getItem('name')
-        }).then(res =>
-            res.json().then(result => {
-                let orderList = result.data.length > 10 ? result.data.slice(0, 10) : result.data;
-                this.setState({orderList});
-            })
-        )
+        post('getOwnOrder', {userName: localStorage.getItem('name')}).then(result => {
+            let orderList = result.data.length > 10 ? result.data.slice(0, 10) : result.data;
+            this.setState({orderList});
+        }).catch(error => console.log(error))
     }
 
     //订单卡片

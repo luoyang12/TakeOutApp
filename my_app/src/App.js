@@ -40,6 +40,7 @@ class App extends Component {
     };
 
     render() {
+        const {shopList} =this.state;
         return (<div>
                 <div className="App">
                     {/*<header className="App-header">*/}
@@ -48,7 +49,7 @@ class App extends Component {
                     {/*</header>*/}
                     <img src={'../bannerAdmin.png'} style={{width: '100%', height: 'auto', marginBottom: '0.15rem'}}
                          alt={'banner'}/>
-                    {this.state.shopList && this.state.shopList.map(v => this.shopList(v))}
+                    {shopList && shopList.map(v => this.shopList(v))}
                 </div>
                 <RootComponent/>
             </div>

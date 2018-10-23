@@ -158,7 +158,7 @@ router.get('/getOrderList', function(req, res, next){
  * 传入用户名
  */
 router.post('/getOwnOrder', function(req, res, next){
-    connection.query('SELECT *  FROM orderlist WHERE userName=? ORDER BY orderId DESC',[req.body.userName],function (err, result) {
+    connection.query('SELECT *  FROM orderlist WHERE userName=? ORDER BY orderId DESC',[JSON.parse(req.body.model).userName],function (err, result) {
         if(err){
             console.log('[INSERT ERROR] - ',err.message);
             return;

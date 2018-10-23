@@ -10,7 +10,7 @@ import '../styles/_root.css';
 // import {Link} from 'react-router-dom';
 class ConfirmScreen extends React.Component {
     constructor(props, context) {
-        super(props, context)
+        super(props, context);
 
         this.state = {
             address: '',
@@ -67,7 +67,7 @@ class ConfirmScreen extends React.Component {
     };
 
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <div>
                 <h3 className={'headerTop'}>

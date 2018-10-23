@@ -5,7 +5,7 @@ import '../styles/_root.css';
 //import {Link} from 'react-router-dom';
 class LoginScreen extends React.Component {
     constructor(props, context) {
-        super(props, context)
+        super(props, context);
 
         this.state = {
             name: '',

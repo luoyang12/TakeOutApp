@@ -17,7 +17,7 @@ class MineComponent extends React.Component {
         localStorage.removeItem('name');
         localStorage.removeItem('password');
         this.setState({
-            logined: localStorage.getItem('name') !== null
+            logined: false
         })
     };
 
